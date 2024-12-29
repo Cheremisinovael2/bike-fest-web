@@ -1,0 +1,796 @@
+*{
+    box-sizing:border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Cy Grotesk Grand Dark';
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'Cy Grotesk Grand Dark';
+    src: url('fonts/CyGrotesk-GrandDark.eot') format('eot'),
+        url('fonts/CyGrotesk-GrandDark.eot?#iefix') format('embedded-opentype'),
+        url('fonts/CyGrotesk-GrandDark.woff2') format('woff2'),
+        url('fonts/CyGrotesk-GrandDark.woff') format('woff'),
+        url('fonts/CyGrotesk-GrandDark.ttf') format('truetype'),
+        url('fonts/CyGrotesk-GrandDark.svg#CyGrotesk-GrandDark') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'TT Neoris Trial';
+    src: url('fonts/TTNeorisTrial-Rg.eot');
+    src: url('fonts/TTNeorisTrial-Rg.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTNeorisTrial-Rg.woff2') format('woff2'),
+        url('fonts/TTNeorisTrial-Rg.woff') format('woff'),
+        url('fonts/TTNeorisTrial-Rg.ttf') format('truetype'),
+        url('fonts/TTNeorisTrial-Rg.svg#TTNeorisTrial-Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color:black;
+    color: #ffff;
+}
+
+.head{
+    background-size: cover;
+    background-image: url(images/wheel_4.svg); 
+    height: 736px;   
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.header{
+    max-width: 1200px;
+}
+
+.menu{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 42px;
+    font-size: 16px;
+    
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #F2AF00;
+    text-decoration: none;
+}
+
+.text{
+    margin-top: 94px;
+}
+
+.h1{
+    font-size: 110px;
+    text-align:left;
+    line-height: 100px;
+}
+
+.h2{
+    font-family: 'TT Neoris Trial';
+    font-size: 36px;
+}
+
+.h3{
+    font-size: 40px;
+    margin-top: 52px;
+}
+
+.button_content {
+    text-align: right;
+    text-decoration: none;
+}
+
+
+.button a{
+    display: inline-block;
+    background-color: #F2AF00;
+    border-radius: 20px;
+    color: #0B0B0B;
+    font-size: 30px;
+    padding: 30px;
+    margin-top: 83px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button a:hover {
+    display: inline-block;
+    background-color: #0B0B0B;
+    border-radius: 20px;
+    color: #F2AF00;
+    font-size: 30px;
+    padding: 30px;
+    margin-top: 83px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.program{
+    height: 851px;
+    margin-top: 130px;
+}
+
+.program_1{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.h4{
+    font-size: 64px;
+}
+.program_content{
+    display: flex;
+    width: 1161px;
+    justify-content: space-between;
+}
+
+.image_content{
+    display: flex;
+    width: 455px;
+    height: 595px;
+    border-radius: 20px;
+    background-image: url(images/photo_13.png);
+    background-size: cover;
+    margin-top: 100px;
+}
+
+.content{
+    display:flex;
+    flex-direction: column;
+    width: 639px;
+    padding-top: 126px;
+}
+.content_1{
+    max-width: 380px;
+}
+
+.date{
+    display:inline-block;
+    border-style: solid;
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 13px;
+    border-width: 1px;
+    color:black;
+    -webkit-text-stroke: 0.5px #ffff;
+    border-color: #ffff;
+    background-color:black;
+    transition: 0.3s;
+}
+
+.date.active{
+    display:inline-block;
+    border-radius: 30px;
+    padding: 22px;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: #930D1C;
+    color:#ffff;
+    -webkit-text-stroke: 0px;
+    border-width: 0px;
+    transition: 0.3s;
+}
+
+.two{
+    color:#ffff;
+    background-color: #930D1C;
+}
+
+.one{
+    border-color: #ffff;
+    border-width: 0.5px;
+    background-color:black;
+    color:black;
+    -webkit-text-stroke: 0.5px #ffff;
+}
+
+.content_2{
+    display:none;
+    width: 639px;
+    gap: 30px;
+    padding-top: 75px;
+}
+
+.content_2.active {
+    display:flex;
+}
+
+.time{
+    display: block;
+    color:#F2AF00;
+    font-family: 'TT Neoris Trial';
+    letter-spacing: 3%;
+    line-height: 50px;
+    font-size: 30px;
+    -webkit-text-stroke:2px #F2AF00;
+}
+
+.event{
+    display:block;
+    font-family: 'TT Neoris Trial';
+    letter-spacing: 3%;
+    line-height: 50px;
+    font-size: 30px;
+    
+}
+
+.h5, .h6, .h7, .h8{
+    font-size: 64px;
+}
+
+.merch{
+    max-height: 584px;
+    margin-top: 130px;
+   
+}
+
+.merch_1{
+    max-width:1280px;
+    margin: 0 auto;
+}
+
+.merch_content{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    margin-top:57px;
+}
+
+.image_1{
+    display: flex !important;
+    width: 479px;
+    height: 461px;
+    border-radius: 20px;
+    background-image: url(images/helmet_yellow.png);
+    background-size:cover;
+    justify-content: end;
+    align-items: end;
+}
+
+.image_2{
+    display: flex !important;
+    width: 479px;
+    height: 461px;
+    border-radius: 20px;
+    background-image: url(images/glasses_yellow.png);
+    background-size:cover;
+    justify-content: end;
+    align-items: end;
+}
+
+.image_3{
+    display: flex !important;
+    width: 479px;
+    height: 461px;
+    border-radius: 20px;
+    background-image: url(images/pin_yellow.png);
+    background-size:cover;
+    justify-content: end;
+    align-items: end;
+}
+
+.image_4{
+    display: flex !important;
+    width: 479px;
+    height: 461px;
+    border-radius: 20px;
+    background-image: url(images/pants_yellow.png);
+    background-size:cover;
+    justify-content: end;
+    align-items: end;
+}
+
+.image_5{
+    display: flex !important;
+    width: 479px;
+    height: 461px;
+    border-radius: 20px;
+    background-image: url(images/glowes_yellow.png);
+    background-size:cover;
+    justify-content: end;
+    align-items: end;
+}
+
+.image_6{
+    display: flex !important;
+    width: 479px;
+    height: 461px;
+    border-radius: 20px;
+    background-image: url(images/shopper_yellow.png);
+    background-size:cover;
+    justify-content: end;
+    align-items: end;
+}
+
+.arrow_left{
+    width: 90px;
+    height: 90px;
+    background-color:#F2AF00;
+    opacity: 40%;
+    border-radius: 50%;
+    background-image: url(images/arrow_left.png);
+    background-repeat: no-repeat;
+    background-position: 45% 50%;
+    cursor: pointer;
+}
+
+.arrow_right{
+    width: 90px;
+    height: 90px;
+    background-color:#F2AF00;
+    opacity: 40%;
+    border-radius: 50%;   
+    background-image: url(images/arrow_right.png);
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    cursor: pointer;
+}
+
+.price_background{
+    width: 114px;
+    height: 31px;
+    background-color:black;
+    border-radius: 20px; 
+}
+
+.price_background_big{
+    width: 261px;
+    height: 71px;
+    background-color:black;
+    border-radius: 20px;
+}
+
+.price_two{
+    width: 237px;
+    height: 56px;
+    display:block;
+    padding: 16px;
+    border-radius: 14px;
+    font-size: 30px;
+    font-family: 'TT Neoris Trial';
+    border-style: solid;
+    border-color: #ffff;
+    border-width: 1px;
+    background-color:black;
+    color:black;
+    -webkit-text-stroke: 1px #ffff;
+    text-align:center;
+}
+
+.gallery{
+    height: 975px;
+    margin-top: 166px;
+    
+}
+
+.gallery_1{
+    margin:0 auto;
+    /* max-width: 1280px; */
+}
+
+.gallery_text{
+    max-width: 1280px;
+    margin:0 auto;
+    padding-bottom:50px;
+    justify-content: space-between;
+}
+
+.gallery_content{
+    display: flex;
+    height:838px;
+    width: 3057px;
+}
+
+.box_1{
+    display: flex;
+    width: 445px;
+    height:838px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.photo_1{
+    display: flex;
+    width: 445px;
+    height: 516px;
+    background-image: url(images/photo_1.png);
+    background-size: cover;
+}
+
+.photo_2{
+    display: flex;
+    width: 440px;
+    height: 117px;
+    background-image: url(images/photo_2.png);
+    background-size: cover;
+}
+
+.box_2{
+    display:inline;
+    width: 705px;
+    height: 838px;
+    margin-left: 70px;
+}
+
+.box_2_2{
+    display: flex;
+    width: 670px;
+    height: 716px;
+}
+
+.photo_3{
+    display: flex;
+    width: 550px;
+    height: 122px;
+    background-image: url(images/photo_3.png);
+    background-size: cover;
+    
+}
+
+.photo_4{
+    display: flex;
+    width: 370px;
+    height: 541px;
+    background-image: url(images/photo_4.png);
+    background-size: cover;
+    transform: translate(0px,175px)
+}
+
+.photo_5{
+    display: flex;
+    width: 220px;
+    height: 307px;
+    background-image: url(images/photo_5.png);
+    background-size: cover;
+    transform: translate(80px,125px)
+}
+
+.box_3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 362px;
+    height:838px;
+}
+
+.photo_6{
+    display: flex;
+    width: 362px;
+    height: 415px;
+    background-image: url(images/photo_6.png);
+    background-size: cover;
+}
+
+.photo_7{
+    display: flex;
+    width: 266px;
+    height: 200px;
+    background-image: url(images/photo_7.png);
+    background-size: cover;
+}
+
+.box_4{
+    display:flex;
+    margin-left: 74px;
+    width: 607px;
+    height: 838px; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.photo_8{
+    display: flex;
+    width: 441px;
+    height: 138px;
+    background-image: url(images/photo_8.png);
+    background-size: cover;
+    transform: translate(166px,84px);
+}
+
+.photo_9{
+    display: flex;
+    width: 491px;
+    height: 446px;
+    background-image: url(images/photo_9.png);
+    background-size: cover;
+    transform: translate(0px,-96px);
+}
+
+.box_5{
+    display: flex;
+    width: 747px;
+    height: 838px;
+    flex-direction: column;
+    justify-content: space-between;
+}   
+
+.box_5_2{
+    display:flex;
+    width: 747px;
+    height: 538px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.photo_10{
+    display: flex;
+    width: 341px;
+    height: 400px;
+    background-image: url(images/photo_10.png);
+    background-size: cover;
+    transform: translate(406px,0px);
+}
+
+.photo_11{
+    display: flex;
+    width: 220px;
+    height: 205px;
+    background-image: url(images/photo_11.png);
+    background-size: cover;
+    transform: translate(70px,0px);
+}
+
+.photo_12{
+    display: flex;
+    width: 617px;
+    height: 138px;
+    background-image: url(images/photo_12.png); 
+    background-size: cover;
+}
+    
+.sale{
+    margin-top: 130px;
+}
+
+.sale_content{
+    font-size: 64px;
+    display: block;
+    text-align: center;
+}
+
+.sale_text_one, .sale_text_two, .sale_text_time{
+    -webkit-text-stroke: 4px #930D1C;
+}
+
+.sale_background{
+    background-image: url(images/graphic_background.png);
+    background-size: cover;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sale_text_time{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 74px;
+}
+
+.sale_text_time div{
+	position: relative;
+	width: 140px;
+	text-align: center;
+	font-size: 64px;
+	margin: 0 5px;
+}
+.time_sale {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.registration{
+    margin-top: 116px;
+    background-image: url(images/fire_background_long.png);
+    height: 713px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h7{
+    margin-bottom: 172px;
+}
+
+.registration_content{
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1 1 auto;
+}
+
+.registration_form{
+    max-width: 1000px;
+}
+
+.data{
+    display: block;
+    margin-top: 32px;
+    padding: 7px 20px;
+    height: 66px;
+    font-family: 'TT Neoris Trial';
+    font-size: 32px;
+    background-color:#0B0B0B;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #ffff;
+    border-width: 1px;
+    color:#ffff;
+    opacity: 70%;
+    width: 80%;
+}
+
+.button_1{
+    display: inline-block;
+    background-color: #F2AF00;
+    border-radius: 20px;
+    color: #0B0B0B;
+    font-size: 30px;
+    padding: 30px;
+    margin-top: 83px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button_1:hover {
+    display: inline-block;
+    background-color: #0B0B0B;
+    border-radius: 20px;
+    color: #F2AF00;
+    font-size: 30px;
+    padding: 30px;
+    margin-top: 83px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contacts{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.contacts_content{
+    margin-top: 54px;
+    width: 1160px
+}
+.contacts_text{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacts_text_one, .contacts_text_two, .contacts_text_three{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'TT Neoris Trial';
+    font-size: 24px;
+}
+
+.contacts_images{
+    margin-top: 50px;
+    margin-bottom: 74px;
+    display: flex;
+    align-items: center;
+    width: 316px;
+    justify-content: space-between;
+}
+.contacts_images_one{
+    background-image: url(images/logo.png);
+    display: flex;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-size: cover;
+    cursor: pointer;
+}
+.contacts_images_two a{
+    display: flex;
+    width: 128px;
+    height: 128px;
+    background-size: cover;
+    cursor: pointer;
+} 
+
+.slick-arrow {
+    text-indent: -9999px;
+    display: block;
+    flex: 1 0 auto;
+    cursor: pointer;
+    color: white;
+    border: 0;
+    width: 90px;
+    height: 90px;
+    background-color:#F2AF00;
+    opacity: 40%;
+    border-radius: 50%;
+}
+
+.slick-prev{
+    background-image: url(images/arrow_left.png);
+    background-repeat: no-repeat;
+    background-position: 45% 50%;
+}
+
+.slick-next{
+    background-image: url(images/arrow_right.png);
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+}
+
+.slick-slide {
+    opacity: 0;
+}
+
+.slick-slide {
+    transform: scale(0.7);
+}
+
+.slick-active {
+    opacity: 1;
+}
+
+.slick-center {
+    transform: scale(1);
+    animation: animation 0.5s forwards;
+}
+
+@keyframes animation {
+    0% {
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.gallery {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+}
+
+#makeMeScrollable {
+    width:100%;
+    position: relative;
+}
+
+#makeMeScrollable div.scrollableArea div {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    margin-right: 70px; 
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.scrollableArea {
+    display: flex;
+}
